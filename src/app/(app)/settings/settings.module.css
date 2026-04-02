@@ -1,0 +1,307 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.headerIcon {
+  background: var(--primary);
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--text-muted);
+}
+
+.tabs {
+  display: flex;
+  gap: 2rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.tabBtn {
+  padding: 1rem 0.5rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+
+.tabActive {
+  border-bottom-color: var(--primary);
+  color: var(--primary);
+}
+
+.settingsContent {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.sectionSubtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.vendorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.vendorCard {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  background: var(--background);
+}
+
+.vendorCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.vendorName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.vendorBadge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.badgeFabric {
+  background: rgba(14, 165, 233, 0.1);
+  color: #0EA5E9;
+}
+
+.badgeDyeing {
+  background: rgba(237, 108, 2, 0.1);
+  color: var(--warning);
+}
+
+.vendorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.infoRow {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem;
+  background: var(--background);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--border);
+}
+
+.emptyIcon {
+  color: var(--border);
+  margin: 0 auto 1rem auto;
+}
+
+.emptyTitle {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.emptySubtitle {
+  color: var(--text-muted);
+}
+
+.teamTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.teamTable th {
+  padding: 1rem 0.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.teamTable td {
+  padding: 1.25rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.teamMemberCell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+}
+
+.teamAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.roleBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .tabs {
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .tabBtn {
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
+
+  .settingsContent {
+    padding: 1.25rem;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .sectionHeader button {
+    width: 100%;
+  }
+
+  .vendorGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .teamTable, 
+  .teamTable thead, 
+  .teamTable tbody, 
+  .teamTable th, 
+  .teamTable td, 
+  .teamTable tr {
+    display: block;
+  }
+
+  .teamTable thead {
+    display: none;
+  }
+
+  .teamTable tr {
+    margin-bottom: 1.5rem;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+  }
+
+  .teamTable td {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 0.75rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .teamTable td:last-child {
+    border-bottom: none;
+  }
+
+  .teamTable td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+
+  .teamMemberCell {
+    justify-content: flex-end;
+  }
+
+  .actionButtons {
+    justify-content: flex-end;
+  }
+}
